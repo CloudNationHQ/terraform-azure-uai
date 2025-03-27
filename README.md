@@ -1,4 +1,4 @@
-# User Assigned Idedtity
+# User Assigned Identity
 
 This Terraform module automates the creation of user assigned identity resources.
 
