@@ -18,9 +18,8 @@ module "rg" {
 }
 
 module "identity" {
-  # source  = "cloudnationhq/sa/azure"
-  # version = "~> 3.0"
-  source = "../../"
+  source  = "cloudnationhq/uai/azure"
+  version = "~> 1.0"
 
   config = {
     name           = module.naming.user_assigned_identity.name
