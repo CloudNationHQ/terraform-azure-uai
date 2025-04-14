@@ -19,9 +19,9 @@ test-parallel:
 	cd tests && go test -v -timeout 60m -run '^TestApplyAllParallel$$' -args $(TEST_ARGS) .
 
 docs:
-	@echo "Generating document-style documentation for root and modules..."
+	@echo "Generating documentation for root and modules..."
 	terraform-docs markdown document . --output-file README.md --output-mode inject --hide modules
-	@for dir in modules/*; do \
+	for dir in modules/*; do \
 		if [ -d "$$dir" ]; then \
 			echo "Processing $$dir..."; \
 			(cd "$$dir" && terraform-docs markdown document . --output-file README.md --output-mode inject --hide modules) || echo "Skipped: $$dir"; \
