@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v1.1.0...v1.1.1) (2025-04-14)
+
+
+### Bug Fixes
+
+* fix submodule generation from makefile ([#6](https://github.com/CloudNationHQ/terraform-azure-uai/issues/6)) ([6d58289](https://github.com/CloudNationHQ/terraform-azure-uai/commit/6d5828945106bff61cb7d84d0e0f4f1a2522cd18))
+
 ## [1.1.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v1.0.0...v1.1.0) (2025-03-27)
 
 
