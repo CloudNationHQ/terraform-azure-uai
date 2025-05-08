@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v1.1.1...v2.0.0) (2025-05-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* The data structure changed, causing a recreate on existing resources.
+
+### Features
+
+* small refactor ([#9](https://github.com/CloudNationHQ/terraform-azure-uai/issues/9)) ([5bd1ebb](https://github.com/CloudNationHQ/terraform-azure-uai/commit/5bd1ebbc2831e161edfead600fd2c5a65d0f7537))
+
 ## [1.1.1](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v1.1.0...v1.1.1) (2025-04-14)
 
 
