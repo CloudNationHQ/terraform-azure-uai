@@ -11,6 +11,11 @@
 
 * small refactor ([#9](https://github.com/CloudNationHQ/terraform-azure-uai/issues/9)) ([5bd1ebb](https://github.com/CloudNationHQ/terraform-azure-uai/commit/5bd1ebbc2831e161edfead600fd2c5a65d0f7537))
 
+### Upgrade from v1.1.1 to v2.0.0:
+
+- Update module reference to: `version = "~> 2.0"`
+- The property and variable resource_group is renamed to resource_group_name
+
 ## [1.1.1](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v1.1.0...v1.1.1) (2025-04-14)
 
 
