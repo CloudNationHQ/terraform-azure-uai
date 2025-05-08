@@ -39,10 +39,10 @@ Type:
 
 ```hcl
 object({
-    name           = string
-    resource_group = optional(string)
-    location       = optional(string)
-    tags           = optional(map(string))
+    name                = string
+    resource_group_name = optional(string)
+    location            = optional(string)
+    tags                = optional(map(string))
   })
 ```
 
@@ -58,7 +58,7 @@ Type: `string`
 
 Default: `null`
 
-### <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group)
+### <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name)
 
 Description: default resource group to be used.
 

@@ -1,10 +1,10 @@
 variable "config" {
   description = "Contains all user assigned identity configuration"
   type = object({
-    name           = string
-    resource_group = optional(string)
-    location       = optional(string)
-    tags           = optional(map(string))
+    name                = string
+    resource_group_name = optional(string)
+    location            = optional(string)
+    tags                = optional(map(string))
   })
 }
 
@@ -14,7 +14,7 @@ variable "location" {
   default     = null
 }
 
-variable "resource_group" {
+variable "resource_group_name" {
   description = "default resource group to be used."
   type        = string
   default     = null
