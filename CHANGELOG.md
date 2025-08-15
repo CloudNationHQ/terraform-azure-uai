@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v2.0.0...v2.1.0) (2025-08-15)
+
+
+### Features
+
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#11](https://github.com/CloudNationHQ/terraform-azure-uai/issues/11)) ([b7ba197](https://github.com/CloudNationHQ/terraform-azure-uai/commit/b7ba19782c04e1a5131a18cee224640f88b343d3))
+
 ## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v1.1.1...v2.0.0) (2025-05-08)
 
 
