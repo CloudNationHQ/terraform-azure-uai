@@ -22,7 +22,10 @@ resource "azurerm_user_assigned_identity" "uai" {
 resource "azurerm_federated_identity_credential" "creds" {
   for_each = var.config.federated_credentials
 
-  name                = each.key
+  name = coalesce(
+    each.value.name, each.key
+  )
+
   resource_group_name = azurerm_user_assigned_identity.uai.resource_group_name
   parent_id           = azurerm_user_assigned_identity.uai.id
   audience            = each.value.audience

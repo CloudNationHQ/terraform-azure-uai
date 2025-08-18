@@ -1,13 +1,3 @@
-# variable "config" {
-#   description = "Contains all user assigned identity configuration"
-#   type = object({
-#     name                = string
-#     resource_group_name = optional(string)
-#     location            = optional(string)
-#     tags                = optional(map(string))
-#   })
-# }
-
 variable "config" {
   description = "Contains all user assigned identity configuration"
   type = object({
@@ -17,6 +7,7 @@ variable "config" {
     tags                = optional(map(string))
 
     federated_credentials = optional(map(object({
+      name     = optional(string)
       audience = list(string)
       issuer   = string
       subject  = string

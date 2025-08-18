@@ -48,6 +48,7 @@ object({
     tags                = optional(map(string))
 
     federated_credentials = optional(map(object({
+      name     = optional(string)
       audience = list(string)
       issuer   = string
       subject  = string
