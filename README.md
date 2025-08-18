@@ -6,6 +6,8 @@ This Terraform module automates the creation of user assigned identity resources
 
 Utilization of terratest for robust validation.
 
+Supports multiple federated credentials
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -25,6 +27,7 @@ The following providers are used by this module:
 
 The following resources are used by this module:
 
+- [azurerm_federated_identity_credential.creds](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/federated_identity_credential) (resource)
 - [azurerm_user_assigned_identity.uai](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) (resource)
 
 ## Required Inputs
@@ -43,6 +46,12 @@ object({
     resource_group_name = optional(string)
     location            = optional(string)
     tags                = optional(map(string))
+
+    federated_credentials = optional(map(object({
+      audience = list(string)
+      issuer   = string
+      subject  = string
+    })), {})
   })
 ```
 
