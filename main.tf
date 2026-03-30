@@ -16,6 +16,8 @@ resource "azurerm_user_assigned_identity" "uai" {
   tags = coalesce(
     var.config.tags, var.tags
   )
+
+  isolation_scope = var.config.isolation_scope
 }
 
 # federated identity credentials

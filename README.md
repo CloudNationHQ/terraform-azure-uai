@@ -46,11 +46,12 @@ object({
     resource_group_name = optional(string)
     location            = optional(string)
     tags                = optional(map(string))
+    isolation_scope     = optional(string)
     federated_credentials = optional(map(object({
       name     = optional(string)
       audience = list(string)
-      issuer   = string
-      subject  = string
+      issuer                    = string
+      subject                   = string
     })), {})
   })
 ```
