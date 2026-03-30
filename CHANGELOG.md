@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v2.1.0...v2.2.0) (2026-03-30)
+
+
+### Features
+
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#22](https://github.com/CloudNationHQ/terraform-azure-uai/issues/22)) ([f5c420c](https://github.com/CloudNationHQ/terraform-azure-uai/commit/f5c420c0682bd82ee623382ef6fcc73f4775c188))
+* **deps:** bump github.com/ulikunitz/xz from 0.5.10 to 0.5.14 in /tests ([#15](https://github.com/CloudNationHQ/terraform-azure-uai/issues/15)) ([b854e67](https://github.com/CloudNationHQ/terraform-azure-uai/commit/b854e672d3930dbe71449e54022dd1ae46b99675))
+* **deps:** bump golang.org/x/crypto from 0.36.0 to 0.45.0 in /tests ([#21](https://github.com/CloudNationHQ/terraform-azure-uai/issues/21)) ([f52f7e9](https://github.com/CloudNationHQ/terraform-azure-uai/commit/f52f7e90ec3b267127d48a7542add771a5632b8c))
+
+
+### Bug Fixes
+
+* add missing isolation_scope property to user assigned identity ([#24](https://github.com/CloudNationHQ/terraform-azure-uai/issues/24)) ([fbae011](https://github.com/CloudNationHQ/terraform-azure-uai/commit/fbae011dacab9574f8d9e22acda06dd8c6158789))
+
 ## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v2.0.0...v2.1.0) (2025-08-18)
 
 
