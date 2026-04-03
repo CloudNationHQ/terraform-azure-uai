@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v2.2.0...v2.3.0) (2026-04-03)
+
+
+### Features
+
+* add missing outputs ([#26](https://github.com/CloudNationHQ/terraform-azure-uai/issues/26)) ([b71b1cf](https://github.com/CloudNationHQ/terraform-azure-uai/commit/b71b1cf21aacd7c561c399eb2de667555a4fc837))
+
 ## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v2.1.0...v2.2.0) (2026-03-30)
 
 
