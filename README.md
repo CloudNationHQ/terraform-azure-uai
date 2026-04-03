@@ -50,8 +50,8 @@ object({
     federated_credentials = optional(map(object({
       name     = optional(string)
       audience = list(string)
-      issuer                    = string
-      subject                   = string
+      issuer   = string
+      subject  = string
     })), {})
   })
 ```
@@ -91,6 +91,10 @@ The following outputs are exported:
 ### <a name="output_config"></a> [config](#output\_config)
 
 Description: Contains all user assigned identity configuration
+
+### <a name="output_federated_credentials"></a> [federated\_credentials](#output\_federated\_credentials)
+
+Description: Contains all federated identity credential configurations
 <!-- END_TF_DOCS -->
 
 ## Goals
