@@ -1,36 +1,20 @@
 # user assigned identity
-resource "azurerm_user_assigned_identity" "uai" {
-  name = var.config.name
+resource "azurerm_user_assigned_identity" "this" {
+  name                = var.identity.name
+  resource_group_name = coalesce(var.identity.resource_group_name, var.resource_group_name)
+  location            = coalesce(var.identity.location, var.location)
+  tags                = coalesce(var.identity.tags, var.tags)
 
-  resource_group_name = coalesce(
-    lookup(
-      var.config, "resource_group_name", null
-    ), var.resource_group_name
-  )
-
-  location = coalesce(
-    lookup(var.config, "location", null
-    ), var.location
-  )
-
-  tags = coalesce(
-    var.config.tags, var.tags
-  )
-
-  isolation_scope = var.config.isolation_scope
+  isolation_scope = var.identity.isolation_scope
 }
 
 # federated identity credentials
-resource "azurerm_federated_identity_credential" "creds" {
-  for_each = var.config.federated_credentials
+resource "azurerm_federated_identity_credential" "this" {
+  for_each = var.identity.federated_credentials
 
-  name = coalesce(
-    each.value.name, each.key
-  )
-
-  resource_group_name = azurerm_user_assigned_identity.uai.resource_group_name
-  parent_id           = azurerm_user_assigned_identity.uai.id
-  audience            = each.value.audience
-  issuer              = each.value.issuer
-  subject             = each.value.subject
+  name                      = coalesce(each.value.name, each.key)
+  user_assigned_identity_id = azurerm_user_assigned_identity.this.id
+  audience                  = each.value.audience
+  issuer                    = each.value.issuer
+  subject                   = each.value.subject
 }
