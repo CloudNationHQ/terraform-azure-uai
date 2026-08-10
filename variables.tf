@@ -1,5 +1,5 @@
-variable "config" {
-  description = "Contains all user assigned identity configuration"
+variable "identity" {
+  description = "contains all user assigned identity configuration"
   type = object({
     name                = string
     resource_group_name = optional(string)
@@ -13,6 +13,16 @@ variable "config" {
       subject  = string
     })), {})
   })
+
+  validation {
+    condition     = lookup(var.identity, "location", null) != null || var.location != null
+    error_message = "location must be set on var.identity.location or on the module-level var.location."
+  }
+
+  validation {
+    condition     = lookup(var.identity, "resource_group_name", null) != null || var.resource_group_name != null
+    error_message = "resource_group_name must be set on var.identity.resource_group_name or on the module-level var.resource_group_name."
+  }
 }
 
 variable "location" {
