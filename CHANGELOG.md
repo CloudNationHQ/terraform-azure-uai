@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v3.0.0...v3.1.0) (2026-10-20)
+
+
+### Features
+
+* **deps:** bump github.com/klauspost/compress in /tests ([#34](https://github.com/CloudNationHQ/terraform-azure-uai/issues/34)) ([172ab1f](https://github.com/CloudNationHQ/terraform-azure-uai/commit/172ab1fc627dcb85ff893a9863ca504e0354fd9e))
+
 ## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-uai/compare/v2.3.0...v3.0.0) (2026-08-10)
 
 
